@@ -1,1 +1,1 @@
-https://discord.com/oauth2/authorize?client_id=1313154516027445288&permissions=2147609600&integration_type=0&scope=bot
+oops
