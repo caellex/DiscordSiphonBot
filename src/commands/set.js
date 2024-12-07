@@ -21,7 +21,7 @@ module.exports = {
     async execute(interaction) {
       const user = interaction.options.getUser("user");
       const amount = interaction.options.getInteger("amount");
-      const hasRole = interaction.member.roles.cache.some(role => role.name === 'Admin' || role.name === 'Moderator' || role.name === 'Banker');
+      const hasRole = interaction.member.roles.cache.some(role => role.name === 'Admin' || role.name === 'Moderator' || role.name === 'Banker' || role.name === 'Developer');
   
       if (!user) {
         return interaction.reply("Please try again, with a valid user selected.");

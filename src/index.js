@@ -4,7 +4,7 @@ const fs = require("fs");
 const { initializeDatabase } = require('./dbInit');
 const { populateCurrency } = require('./currency');  
 
-require("dotenv").config();
+require('dotenv').config({ path: path.resolve('/home/ubuntu/nudd/Mowgli/DiscordSiphonBot/.env') });
 
 
 

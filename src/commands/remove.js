@@ -33,7 +33,8 @@ module.exports = {
         (role) =>
           role.name === "Admin" ||
           role.name === "Moderator" ||
-          role.name === "Banker"
+          role.name === "Banker" ||
+          role.name === "Developer"
       );
       if (!hasRole) {
         return interaction.reply(

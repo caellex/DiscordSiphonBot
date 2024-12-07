@@ -15,7 +15,7 @@ module.exports = {
   async execute(interaction) {
     const user = interaction.options.getUser("user");
     let logs;
-    const hasRole = interaction.member.roles.cache.some(role => role.name === 'Admin' || role.name === 'Moderator' || role.name === 'Banker');
+    const hasRole = interaction.member.roles.cache.some(role => role.name === 'Admin' || role.name === 'Moderator' || role.name === 'Banker' || role.name === 'Developer');
     if(!hasRole)return interaction.reply(`You are not permitted to view logs. Please talk to a banker, Admin or Moderator.`)
     try {
       if (user) {
