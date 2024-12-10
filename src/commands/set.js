@@ -28,7 +28,9 @@ module.exports = {
       }
   
       if (user.id !== interaction.user.id) {
-        if (!hasRole) {
+        if (hasRole) {
+          return
+        } else {
           return interaction.reply(`You may only remove balance from yourself. If you have the banker role and are trying to remove someone's balance, something is off.`);
         }
       }
@@ -40,7 +42,7 @@ module.exports = {
       const updatedUser = await setBalance(user.id, amount);
   
       if (!updatedUser) {
-        return interaction.reply("User's balance was not set.. No clue why.'");
+        return interaction.reply(`User's balance was not set.. \nUser ID: ${user.id}.\nAmount:${amount}`);
       }
   
       await interaction.reply(`${user.tag}'s balance set to ${amount} siphoned energy.`);
